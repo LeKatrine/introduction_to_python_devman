@@ -1,0 +1,6 @@
+Shelf_1 : {'name': 'Тайная комната', 'authors': 'Роулинг'}
+Shelf_1 : {'name': 'Философский камень', 'authors': 'Роулинг'}
+Shelf_1 : {'name': 'Узник Азкабана', 'authors': 'Роулинг'}
+Shelf_1 : {'name': 'Первая', 'authors': 'Первый'}
+Shelf_1 : {'name': 'Вторая', 'authors': 'Второй'}
+Shelf_1 : {'name': 'третья', 'authors': 'третий'}
