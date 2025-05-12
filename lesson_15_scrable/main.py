@@ -39,34 +39,31 @@ LETTER_SCORES = {
 
 
 def get_random_letter():
-    converted_dictionary = list(LETTER_SCORES.keys())
-    random_letter = random.choice(converted_dictionary)
-    return random_letter
-    # return random.choice(list(LETTER_SCORES.keys()))
+    return random.choice(list(LETTER_SCORES.keys()))
+
+
+def calculate_score(word):
+    return sum([LETTER_SCORES.get(char, 0) for char in word.upper()])
 
 
 def get_word_with_letter(letter):
     while True:
-        word = input(f"Введите слово на букву {letter}: ").upper()
-        if letter == word[0]:
+        word = input(f"Введите слово на букву {letter}: ")
+        if letter == word[0].upper():
             return word
-        else:
-            print(f"Слово должно начинаться с буквы {letter}. Попробуйте снова")
-
-
-
-def calculate_score(word):
-    all_scores = []
-    for char in word:
-        scores = LETTER_SCORES.get(char, 0)
-        all_scores.append(scores)
-        print(char, scores)
-    sum_scores = sum(all_scores)
-    print(sum_scores, all_scores)
-
-
+        print(f"Слово должно начинаться с буквы {letter}. Попробуйте снова")
 
 
 if __name__ == '__main__':
-    calculate_score(get_word_with_letter(get_random_letter()))
-    calculate_score("Привет")
+    player_words = []
+    player_scores = []
+    random_letter = get_random_letter()
+
+    print(f"Начальная буква: {random_letter}")
+    for num in range(2):
+        print(f"Игрок {num + 1}")
+        player_words.append(get_word_with_letter(random_letter))
+        player_scores.append(calculate_score(player_words[num]))
+
+    for num in range(len(player_words)):
+        print(f"Игрок {num + 1} ввёл слово {player_words[num]} и набрал {player_scores[num]} очков")
