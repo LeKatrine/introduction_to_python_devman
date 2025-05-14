@@ -54,16 +54,36 @@ def get_word_with_letter(letter):
         print(f"Слово должно начинаться с буквы {letter}. Попробуйте снова")
 
 
+# if __name__ == '__main__':
+#     player_words = []
+#     player_scores = []
+#     random_letter = get_random_letter()
+#
+#     print(f"Начальная буква: {random_letter}")
+#     for num in range(2):
+#         print(f"Игрок {num + 1}")
+#         player_words.append(get_word_with_letter(random_letter))
+#         player_scores.append(calculate_score(player_words[num]))
+#
+#     for num in range(len(player_words)):
+#         print(f"Игрок {num + 1} ввёл слово {player_words[num]} и набрал {player_scores[num]} очков")
+
+
 if __name__ == '__main__':
-    player_words = []
-    player_scores = []
     random_letter = get_random_letter()
-
     print(f"Начальная буква: {random_letter}")
-    for num in range(2):
-        print(f"Игрок {num + 1}")
-        player_words.append(get_word_with_letter(random_letter))
-        player_scores.append(calculate_score(player_words[num]))
+    print(f"Игрок 1")
+    word_one = get_word_with_letter(random_letter)
+    score_one = calculate_score(word_one)
+    print(f"Игрок 2")
+    word_two = get_word_with_letter(random_letter)
+    score_two = calculate_score(word_two)
 
-    for num in range(len(player_words)):
-        print(f"Игрок {num + 1} ввёл слово {player_words[num]} и набрал {player_scores[num]} очков")
+    print(f"Игрок 1 ввёл слово {word_one} и набрал {score_one} очков")
+    print(f"Игрок 2 ввёл слово {word_two} и набрал {score_two} очков")
+    if score_one > score_two:
+        print("Игрок 1 Победил!")
+    elif score_one < score_two:
+        print("Игрок 2 Победил!")
+    else:
+        print("Ничья!")
