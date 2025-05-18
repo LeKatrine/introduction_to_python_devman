@@ -1,0 +1,59 @@
+### >>> PyCharm & JetBrains IDE <<< ###
+# Вся папка .idea (основные настройки проекта, плагины, кэш)
+.idea/
+
+# Конфигурационные файлы проекта (модули, настройки)
+*.iml
+*.ipr
+*.iws
+
+# Файлы workspace (локальные настройки, открытые вкладки, история действий)
+.idea/workspace.xml
+.idea/vcs.xml          # Настройки VCS (Git, SVN)
+.idea/misc.xml         # Разные пользовательские настройки
+.idea/shelf/           # Shelved changes (отложенные изменения)
+.idea/tasks.xml        # Список задач (TODO)
+.idea/dictionaries/    # Пользовательские словари (например, для проверки орфографии)
+
+# Кэш и временные файлы PyCharm
+.idea/modules.xml
+.idea/.name
+
+# Настройки запуска (Run/Debug Configurations)
+.idea/runConfigurations/
+
+# Настройки инспекций кода (Code Inspections)
+.idea/inspectionProfiles/
+
+### >>> Python <<< ###
+# Кэш интерпретатора Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Виртуальные окружения (лучше не коммитить)
+venv/
+.env/
+ENV/
+env/
+
+# Файлы зависимостей (обычно генерируются)
+pip-wheel-metadata/
+*.egg-info/
+
+### >>> Системные/временные файлы <<< ###
+# Файлы операционной системы
+.DS_Store           # macOS
+Thumbs.db           # Windows
+desktop.ini         # Windows
+
+# Резервные копии и временные файлы
+*.bak
+*.tmp
+*.swp
+*~
+
+### >>> Логи и данные <<< ###
+*.log
+*.sqlite
+*.db
